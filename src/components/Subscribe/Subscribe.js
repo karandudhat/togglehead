@@ -64,24 +64,17 @@ const Subscribe = () => {
             <div className="input-group">
 
               {/* EMAIL INPUT */}
-              <input
-              style={{padding: "12px 16px"}}
-                type="email"
-                className={`subscribe-input ${error ? "input-error" : ""}`}
-                placeholder="Enter your Email Address"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
+              <input type="email" style={{ borderRadius: "8px", width:"100%", padding: "10px 16px", border: "1px solid #ccc", marginRight: "16px" }} placeholder="Enter your email" value={email} onChange={(e) => {
+                setEmail(e.target.value);
 
-                  if (error) {
-                    setError("");
-                  }
+                if (error) {
+                  setError("");
+                }
 
-                  if (submitted) {
-                    setSubmitted(false);
-                  }
-                }}
-              />
+                if (submitted) {
+                  setSubmitted(false);
+                }
+              }} />
 
               {/* SUBSCRIBE BUTTON */}
               <button type="submit" className="subscribe-btn">
