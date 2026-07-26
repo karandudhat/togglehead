@@ -16,7 +16,7 @@
 .subscribe-section *,
 .subscribe-section *::before,
 .subscribe-section *::after {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 
@@ -130,10 +130,10 @@
   flex: 1;
 
   width: 100%;
-  height: 46px;
+  height: 46px !important;
 
-  padding: 12px 20px;
-  box-sizing: border-box;
+  padding: 12px 20px !important;
+  box-sizing: border-box !important;
 
   border: 1px solid #e4e4e4;
   border-radius: 7px;
@@ -168,10 +168,10 @@
 ========================================================= */
 
 .subscribe-btn {
-  height: 46px;
+  height: 46px !important;
 
-  padding: 0 22px;
-  box-sizing: border-box;
+  padding: 0 22px !important;
+  box-sizing: border-box !important;
 
   display: inline-flex;
   align-items: center;
@@ -354,12 +354,12 @@
 
   .subscribe-input {
     width: 100%;
-    height: 48px;
+    height: 48px !important;
   }
 
   .subscribe-btn {
     width: 100%;
-    height: 48px;
+    height: 48px !important;
   }
 
   .subscribe-graphic-wrapper {
@@ -405,16 +405,16 @@
   }
 
   .subscribe-input {
-    height: 44px;
+    height: 44px !important;
     font-size: 13px;
-    padding: 12 14px;
+    padding: 0 14px !important;
     text-align: left;
   }
 
   .subscribe-btn {
-    height: 44px;
+    height: 44px !important;
     font-size: 13px;
-    padding: 0 16px;
+    padding: 0 16px !important;
   }
 
   .subscribe-image {
