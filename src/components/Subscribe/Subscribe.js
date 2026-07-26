@@ -64,7 +64,7 @@ const Subscribe = () => {
             <div className="input-group">
 
               {/* EMAIL INPUT */}
-              <input type="email" style={{ borderRadius: "8px", width:"100%", padding: "10px 16px", border: "1px solid #ccc", marginRight: "16px" }} placeholder="Enter your email" value={email} onChange={(e) => {
+              <input type="email" style={{ borderRadius: "8px", width:"100%", padding: "10px 16px", border: "1px solid #ccc",  }} placeholder="Enter your email" value={email} onChange={(e) => {
                 setEmail(e.target.value);
 
                 if (error) {
