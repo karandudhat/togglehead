@@ -65,6 +65,7 @@ const Subscribe = () => {
 
               {/* EMAIL INPUT */}
               <input
+              style={{padding: "12px 16px"}}
                 type="email"
                 className={`subscribe-input ${error ? "input-error" : ""}`}
                 placeholder="Enter your Email Address"
