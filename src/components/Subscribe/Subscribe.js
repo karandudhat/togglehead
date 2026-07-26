@@ -11,7 +11,6 @@ const Subscribe = () => {
 
     const emailValue = email.trim();
 
-    // Validate email
     if (!emailValue) {
       setError("Please enter a valid email address.");
       setSubmitted(false);
@@ -26,11 +25,9 @@ const Subscribe = () => {
       return;
     }
 
-    // Success
     setError("");
     setSubmitted(true);
 
-    // Clear form after 4 seconds
     setTimeout(() => {
       setSubmitted(false);
       setEmail("");
@@ -41,10 +38,7 @@ const Subscribe = () => {
     <section className="subscribe-section" id="subscribe">
       <div className="subscribe-container">
 
-        {/* =====================================
-            LEFT CONTENT
-        ====================================== */}
-
+        {/* LEFT CONTENT */}
         <div className="subscribe-content">
 
           <h2 className="subscribe-title">Subscribe</h2>
@@ -55,16 +49,10 @@ const Subscribe = () => {
             tempor invidunt ut labore et dolore magna
           </p>
 
-          {/* =====================================
-              SUBSCRIBE FORM
-          ====================================== */}
-
           <form className="subscribe-form" onSubmit={handleSubmit}>
 
             <div className="input-group">
-
-              {/* EMAIL INPUT */}
-              <input type="email" style={{ borderRadius: "8px", width:"100%", padding: "10px 16px", border: "1px solid #ccc",  }} placeholder="Enter your email" value={email} onChange={(e) => {
+              <input type="email" style={{ borderRadius: "8px", width: "100%", padding: "10px 16px", border: "1px solid #ccc", }} placeholder="Enter your email address" value={email} onChange={(e) => {
                 setEmail(e.target.value);
 
                 if (error) {
@@ -76,10 +64,8 @@ const Subscribe = () => {
                 }
               }} />
 
-              {/* SUBSCRIBE BUTTON */}
               <button type="submit" className="subscribe-btn">
                 <span>Subscribe Now</span>
-
                 <svg
                   width="9"
                   height="11"
@@ -93,10 +79,9 @@ const Subscribe = () => {
                   />
                 </svg>
               </button>
-
             </div>
 
-            {/* ERROR MESSAGE */}
+            {/* ERROR MESSAGE — always below input-group */}
             {error && <p className="error-message">{error}</p>}
 
             {/* SUCCESS MESSAGE */}
@@ -110,10 +95,7 @@ const Subscribe = () => {
 
         </div>
 
-        {/* =====================================
-            RIGHT IMAGE
-        ====================================== */}
-
+        {/* RIGHT IMAGE */}
         <div className="subscribe-graphic-wrapper">
           <img
             src="/subscrib_image1.png"

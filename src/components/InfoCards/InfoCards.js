@@ -18,7 +18,7 @@ const cards = [
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod',
   },
-   {
+  {
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod',
   },
@@ -35,7 +35,7 @@ const InfoCards = () => {
     const handleResize = () => {
       if (window.innerWidth <= 640) {
         setVisibleCardsCount(1);
-      } else if (window.innerWidth <= 920) {
+      } else if (window.innerWidth <= 1300) {
         setVisibleCardsCount(2);
       } else {
         setVisibleCardsCount(3);
@@ -148,23 +148,23 @@ const InfoCards = () => {
               >
                 <span>Know More</span>
 
-               <span className="arrow-circle">
-  <svg
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="none"
-    aria-hidden="true"
-  >
-    <path
-      d="M9 5L16 12L9 19"
-      stroke="currentColor"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-</span>
+                <span className="arrow-circle">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
               </a>
             </article>
           ))}
@@ -176,9 +176,8 @@ const InfoCards = () => {
           <button
             key={idx}
             type="button"
-            className={`cards-dot ${
-              idx === startIdx ? 'active' : ''
-            }`}
+            className={`cards-dot ${idx === startIdx ? 'active' : ''
+              }`}
             onClick={() => {
               setStartIdx(idx);
               resetTimer();

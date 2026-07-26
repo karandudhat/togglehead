@@ -102,7 +102,7 @@ const slides = [
     id: 2,
     title: 'Consectetur Adipiscing',
     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    image: '/hero_image1.png',
+    image: '/hero-slider-2.png',
   },
   {
     id: 3,

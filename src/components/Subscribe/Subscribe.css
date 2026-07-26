@@ -11,8 +11,6 @@
   border-bottom: 2px solid #12406F;
 }
 
-/* Global box-sizing fix — prevents padding/border from adding
-   extra height/width to any element inside this section */
 .subscribe-section *,
 .subscribe-section *::before,
 .subscribe-section *::after {
@@ -62,11 +60,8 @@
 
 .subscribe-title {
   margin: 0 0 16px;
-
   color: #12406F;
-
   font-family: var(--font-heading);
-
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 1.0px;
@@ -80,25 +75,21 @@
 
 .subscribe-description {
   max-width: 500px;
-
   margin: 0 0 18px;
-
   color: #555555;
-
   font-family: var(--font-body);
-
   font-size: 14px;
   font-weight: 400;
-
   line-height: 1.6;
 }
 
 
 /* =========================================================
-   FORM
+   FORM — forced to stack vertically, always
 ========================================================= */
 
 .subscribe-form {
+  display: block !important;
   width: 100%;
   margin: 0;
 }
@@ -113,6 +104,7 @@
   max-width: 570px;
 
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
 
   gap: 14px;
@@ -128,6 +120,7 @@
 
 .subscribe-input {
   flex: 1;
+  min-width: 0; /* prevents flex item from overflowing the row */
 
   width: 100%;
   height: 46px !important;
@@ -139,9 +132,7 @@
   border-radius: 7px;
 
   outline: none;
-
   background: #ffffff;
-
   color: #333333;
   text-align: left;
 
@@ -151,12 +142,14 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.subscribe-input.input-error {
+  border-color: #dc2626;
+}
 
 .subscribe-input::placeholder {
   color: #999999;
   text-align: left;
 }
-
 
 .subscribe-input:focus {
   border-color: #12406F;
@@ -169,14 +162,12 @@
 
 .subscribe-btn {
   height: 46px !important;
-
   padding: 0 22px !important;
   box-sizing: border-box !important;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
 
   border: none;
@@ -190,14 +181,11 @@
   font-weight: 500;
 
   white-space: nowrap;
-
   cursor: pointer;
-
   flex-shrink: 0;
 
   transition: all 0.2s ease;
 }
-
 
 .subscribe-btn:hover {
   background: #0e345c;
@@ -211,12 +199,9 @@
 .subscribe-graphic-wrapper {
   width: 100%;
   height: 288px;
-
   display: flex;
-
   align-items: flex-end;
   justify-content: flex-end;
-
   margin: 0;
   padding: 0;
 }
@@ -228,41 +213,35 @@
 
 .subscribe-image {
   display: block;
-
   width: 100%;
   max-width: 500px;
-
   height: auto;
-
   margin: 0;
-
   object-fit: contain;
   object-position: right bottom;
 }
 
 
 /* =========================================================
-   ERROR
+   ERROR / SUCCESS — always full width, own line, below input
 ========================================================= */
+
+.error-message,
+.success-message {
+  display: block !important;
+  width: 100%;
+  clear: both;
+}
 
 .error-message {
   margin: 7px 0 0;
-
   color: #dc2626;
-
   font-size: 12px;
 }
 
-
-/* =========================================================
-   SUCCESS
-========================================================= */
-
 .success-message {
   margin: 7px 0 0;
-
   color: #059669;
-
   font-size: 12px;
 }
 
@@ -299,12 +278,18 @@
   }
 
   .subscribe-form {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
   }
 
   .input-group {
     justify-content: center;
+  }
+
+  .error-message,
+  .success-message {
+    text-align: center;
   }
 
   .subscribe-graphic-wrapper {
@@ -314,11 +299,6 @@
 
   .subscribe-image {
     max-width: 450px;
-  }
-
-  .error-message,
-  .success-message {
-    text-align: center;
   }
 }
 
