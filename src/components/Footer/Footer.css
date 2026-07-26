@@ -25,9 +25,7 @@
   transition: opacity 0.3s ease;
 }
 
-/* =========================================================
-   CONTAINER — proper max-width + responsive side padding
-========================================================= */
+   /* CONTAINER — proper max-width + responsive side padding */
 
 .footer-container {
   width: 100%;
@@ -227,9 +225,7 @@
   text-decoration: underline;
 }
 
-/* =========================================================
-   TABLET (large)
-========================================================= */
+   /* TABLET (large) */
 
 @media (max-width: 1100px) {
   .footer-container {
@@ -247,9 +243,7 @@
   }
 }
 
-/* =========================================================
-   TABLET (small) — 2 columns, office spans full width
-========================================================= */
+   /* TABLET (small) — 2 columns, office spans full width */
 
 @media (max-width: 992px) {
   .site-footer {
@@ -277,9 +271,7 @@
   }
 }
 
-/* =========================================================
-   MOBILE — stacked, everything left-aligned
-========================================================= */
+   /* MOBILE — stacked, everything left-aligned */
 
 @media (max-width: 640px) {
   .site-footer {
@@ -346,9 +338,7 @@
   }
 }
 
-/* =========================================================
-   EXTRA SMALL
-========================================================= */
+   /* EXTRA SMALL */
 
 @media (max-width: 400px) {
   .footer-container {
@@ -376,9 +366,7 @@
   }
 }
 
-/* =========================================================
-   TINY DEVICES
-========================================================= */
+   /* TINY DEVICES */
 
 @media (max-width: 360px) {
   .site-footer {
