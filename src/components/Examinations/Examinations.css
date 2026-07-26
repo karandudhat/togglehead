@@ -1,0 +1,224 @@
+.examinations-section {
+  background-color: #ffffff;
+  padding: 56px 20px;
+
+}
+
+.examinations-container {
+  max-width: 1454px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Left intro block */
+.exam-intro {
+  flex: 0 0 auto;
+  padding-right: 40px;
+  white-space: nowrap;
+}
+
+.exam-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: #12406F;
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.01rem;
+  white-space: nowrap;
+}
+
+.exam-subtitle {
+  font-size: 0.92rem;
+  color: #767676;
+  line-height: 1.5;
+  font-family: var(--font-body);
+  font-weight: 400;
+  margin: 0;
+  white-space: normal;
+}
+
+/* Vertical divider line */
+.exam-divider {
+  width: 1px;
+  height: 70px;
+  background-color: #d6e2ee;
+  flex-shrink: 0;
+  margin-right: 48px;
+}
+
+/* Cards row */
+.exam-cards-grid {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Individual exam card */
+.exam-card {
+  flex: 0 0 calc(33.333% - 21.333px);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+/* Icon wrapper */
+.exam-icon-wrapper {
+  color: #12406F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 2px;
+}
+
+.exam-icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.exam-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.exam-date {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+  font-family: var(--font-heading);
+}
+
+.exam-level {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+  font-family: var(--font-body);
+}
+
+.exam-extra-text {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+  font-family: var(--font-body);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+  .examinations-section {
+    padding: 48px 24px;
+  }
+
+  .exam-title {
+    font-size: 2.1rem;
+  }
+
+  .examinations-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .exam-intro {
+    flex: none;
+    padding-right: 0;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .exam-title {
+    white-space: normal;
+  }
+
+  .exam-divider {
+    width: 100%;
+    height: 1px;
+    margin-right: 0;
+  }
+
+  /* Tablet: 2 cards per row — only 901px–1024px now */
+  .exam-cards-grid {
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .exam-card {
+    flex: 0 0 calc(50% - 12px);
+    padding: 16px 18px;
+    border: 1px solid rgba(18, 64, 111, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(18, 64, 111, 0.06);
+  }
+}
+
+/* Mobile: 1 card per row — now starts at 900px instead of 768px */
+@media (max-width: 900px) {
+  .examinations-section {
+    padding: 40px 24px;
+  }
+
+  .exam-title {
+    font-size: 1.7rem;
+  }
+
+  .exam-cards-grid {
+    gap: 18px;
+    padding: 0 24px;
+  }
+
+  .exam-card {
+    flex: 0 0 100%;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .examinations-section {
+    padding: 32px 16px;
+  }
+
+  .exam-title {
+    font-size: 1.5rem;
+  }
+
+  .exam-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .exam-cards-grid {
+    padding: 0 12px;
+  }
+
+  .exam-card {
+    padding: 10px 12px;
+  }
+
+  .exam-date {
+    font-size: 0.98rem;
+  }
+
+  .exam-level,
+  .exam-extra-text {
+    font-size: 0.85rem;
+  }
+}

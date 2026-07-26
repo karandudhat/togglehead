@@ -1,0 +1,499 @@
+:root {
+  --header-bg: #12406F;
+  --header-height: 80px;
+}
+
+.site-header {
+  background-color: var(--header-bg);
+  height: var(--header-height);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+/* ---- LOGO ---- */
+.header-logo .logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* ---- RIGHT GROUP ---- */
+.header-right-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+}
+
+/* ---- DESKTOP NAV ---- */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  position: relative;
+  list-style: none !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.880rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 16px;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  transition: background 0.18s ease;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.chevron-icon {
+  transition: transform 0.2s ease;
+  opacity: 0.85;
+}
+
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* ---- DROPDOWN ---- */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 210px;
+  background-color: #12406F;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  padding: 6px 0;
+  margin-top: 2px;
+  animation: fadeIn 0.18s ease;
+  z-index: 200;
+}
+
+.dropdown-menu ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  list-style: none !important;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.16s ease, color 0.16s ease;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+}
+
+/* ---- ACTIONS ---- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+/* Search Icon */
+.search-btn {
+  color: rgba(255, 255, 255, 0.9);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: background 0.18s ease;
+  flex-shrink: 0;
+}
+
+.search-btn:hover,
+.search-btn.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* ---- ENROLMENT BUTTON — White bg, navy text, 6px radius ---- */
+.enrolment-btn {
+  background-color: #ffffff;
+  color: #12406F;
+  font-size: 0.900rem;
+  font-weight: 600;
+  padding: 9px 22px;
+  border-radius: 10px;  /* Slight radius — matches screenshot */
+  border: 2px solid #ffffff;
+  transition: all 0.22s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-body);
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+}
+
+.enrolment-btn:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---- HAMBURGER ---- */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   SEARCH BAR PANEL
+   ============================================ */
+.search-expand-bar {
+  background-color: #0d2748;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 0;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+.search-input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.search-input-field {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  padding: 10px 40px 10px 42px;
+  color: #ffffff;
+  font-size: 0.92rem;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: var(--font-body);
+}
+
+.search-input-field:focus {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: #00a4ce;
+  box-shadow: 0 0 0 2px rgba(0, 164, 206, 0.18);
+}
+
+.search-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.clear-query-btn {
+  position: absolute;
+  right: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.clear-query-btn:hover {
+  background: rgba(255, 255, 255, 0.26);
+  color: #ffffff;
+}
+
+.close-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.close-search-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+/* Search Results */
+.search-results-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 4px 0 0 0;
+  z-index: 1100;
+}
+
+.search-results-card {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #0f2d52;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  max-height: 340px;
+  overflow-y: auto;
+  padding: 8px 0;
+  animation: fadeIn 0.18s ease;
+}
+
+.search-results-list {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.search-result-item {
+  list-style: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 20px;
+  color: #ffffff;
+  transition: background 0.16s ease;
+  text-decoration: none;
+}
+
+.search-result-item a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.result-category-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: #00a4ce;
+  color: #0d2748;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.result-title {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.no-results-msg {
+  padding: 18px 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+}
+
+/* ============================================
+   MOBILE DRAWER
+   ============================================ */
+.mobile-drawer-overlay {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+  animation: fadeIn 0.22s ease;
+}
+
+.mobile-drawer-content {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.26);
+  padding: 20px 24px 32px 24px;
+  max-height: 82vh;
+  overflow-y: auto;
+}
+
+.mobile-menu-list {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav-item {
+  list-style: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-nav-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.mobile-sub-list {
+  list-style: none !important;
+  margin: 0;
+  padding: 0 0 12px 14px;
+}
+
+.mobile-sub-list li {
+  list-style: none !important;
+}
+
+.mobile-sub-list a {
+  display: block;
+  padding: 9px 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+  transition: color 0.16s ease;
+}
+
+.mobile-sub-list a:hover {
+  color: #ffffff;
+}
+
+.mobile-drawer-cta {
+  margin-top: 24px;
+}
+
+.enrolment-btn.full-width {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 13px 0;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1100px) {
+  .nav-link {
+    padding: 0 11px;
+    font-size: 0.83rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .desktop-nav { display: none; }
+  .mobile-toggle { display: flex; }
+  .desktop-only { display: none !important; }
+  .header-container { padding: 0 20px; }
+}
+
+@media (max-width: 576px) {
+  :root { --header-height: 62px; }
+
+  .header-logo .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .mobile-drawer-content {
+    padding: 16px 20px 28px 20px;
+  }
+}

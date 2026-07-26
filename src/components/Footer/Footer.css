@@ -1,0 +1,377 @@
+.site-footer {
+  width: 100%;
+  position: relative;
+  background-color: #092852;
+  color: #ffffff;
+  padding-top: 52px;
+  overflow: hidden;
+}
+
+.footer-earth {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 720px;
+  height: auto;
+  transform: translateX(-50%);
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.35;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.9) 35%, black 100%);
+  mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.9) 35%, black 100%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* =========================================================
+   CONTAINER — proper max-width + responsive side padding
+========================================================= */
+
+.footer-container {
+  width: 100%;
+  max-width: 1454px;
+  margin: 0 auto;
+  padding: 0 40px 115px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr 1.35fr;
+  column-gap: 70px;
+  position: relative;
+  z-index: 3;
+}
+
+.footer-col {
+  position: relative;
+  z-index: 4;
+}
+
+.footer-col-title {
+  margin: 0 0 22px;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: left;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-col-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Follow us — left-aligned like every other column */
+.footer-follow {
+  padding-left: 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.contact-list li {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.contact-list strong {
+  color: #ffffff;
+  font-weight: 500;
+  margin-right: 2px;
+}
+
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+}
+
+.social-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.social-icon-btn:hover {
+  background-color: #ffffff;
+  color: #092852;
+  transform: translateY(-3px);
+}
+
+.linkedin-icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.quora-letter {
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.social-icon-btn:hover .quora-letter {
+  color: #092852;
+}
+
+.head-office-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.head-office-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.office-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 1px;
+  color: #ffffff;
+  flex-shrink: 0;
+  display: block;
+}
+
+.location-icon {
+  width: 19px;
+  height: 22px;
+}
+
+.clock-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.bus-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.footer-bottom-bar {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  background-color: #0A3464;
+  padding: 16px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.footer-bottom-bar p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.footer-bottom-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 3px;
+  font-weight: 500;
+}
+
+.footer-bottom-bar a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   TABLET (large)
+========================================================= */
+
+@media (max-width: 1100px) {
+  .footer-container {
+    padding: 0 32px 100px;
+    column-gap: 40px;
+  }
+
+  .social-icons {
+    gap: 16px;
+  }
+
+  .footer-earth {
+    width: 650px;
+    bottom: 30px;
+  }
+}
+
+/* =========================================================
+   TABLET (small) — 2 columns, office spans full width
+========================================================= */
+
+@media (max-width: 992px) {
+  .site-footer {
+    padding-top: 45px;
+  }
+
+  .footer-container {
+    padding: 0 26px 95px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+
+  .footer-office {
+    grid-column: 1 / -1;
+  }
+
+  .social-icons {
+    gap: 18px;
+  }
+
+  .footer-earth {
+    width: 600px;
+    bottom: 30px;
+    opacity: 0.3;
+  }
+}
+
+/* =========================================================
+   MOBILE — stacked, everything left-aligned
+========================================================= */
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    padding: 0 20px 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-col-title {
+    font-size: 19px;
+    margin-bottom: 17px;
+    text-align: left;
+  }
+
+  .contact-list {
+    gap: 8px;
+  }
+
+  .contact-list li,
+  .head-office-list li {
+    font-size: 12.5px;
+  }
+
+  .social-icons {
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .social-icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-icon-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .head-office-list {
+    gap: 12px;
+  }
+
+  .footer-earth {
+    width: 450px;
+    bottom: 35px;
+    opacity: 0.22;
+  }
+
+  .footer-bottom-bar {
+    padding: 13px 15px;
+  }
+
+  .footer-bottom-bar p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 400px) {
+  .footer-container {
+    padding: 0 16px 75px;
+  }
+
+  .footer-col-title {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .social-icons {
+    gap: 14px;
+    justify-content: flex-start;
+  }
+
+  .head-office-list li {
+    font-size: 12px;
+  }
+
+  .footer-earth {
+    width: 380px;
+    bottom: 35px;
+    opacity: 0.18;
+  }
+}
