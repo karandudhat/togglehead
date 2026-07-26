@@ -11,6 +11,14 @@
   border-bottom: 2px solid #12406F;
 }
 
+/* Global box-sizing fix — prevents padding/border from adding
+   extra height/width to any element inside this section */
+.subscribe-section *,
+.subscribe-section *::before,
+.subscribe-section *::after {
+  box-sizing: border-box;
+}
+
 
 /* =========================================================
    CONTAINER
@@ -125,6 +133,7 @@
   height: 46px;
 
   padding: 12px 20px;
+  box-sizing: border-box;
 
   border: 1px solid #e4e4e4;
   border-radius: 7px;
@@ -134,7 +143,7 @@
   background: #ffffff;
 
   color: #333333;
-  text-align: left; /* ← changed from center to left */
+  text-align: left;
 
   font-family: var(--font-body);
   font-size: 14px;
@@ -145,7 +154,7 @@
 
 .subscribe-input::placeholder {
   color: #999999;
-  text-align: left; /* ← changed from center to left */
+  text-align: left;
 }
 
 
@@ -162,6 +171,7 @@
   height: 46px;
 
   padding: 0 22px;
+  box-sizing: border-box;
 
   display: inline-flex;
   align-items: center;
@@ -398,7 +408,7 @@
     height: 44px;
     font-size: 13px;
     padding: 0 14px;
-    text-align: left; /* ensure it stays left here too */
+    text-align: left;
   }
 
   .subscribe-btn {
