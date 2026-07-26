@@ -1,6 +1,4 @@
-/* =========================================================
-   FAQ SECTION
-========================================================= */
+/* FAQ SECTION */
 
 .faq-section {
   width: 100%;
@@ -13,18 +11,14 @@
 }
 
 
-/* =========================================================
-   CONTAINER
-========================================================= */
+   /* CONTAINER */
 
 .faq-container {
   width: 100%;
 }
 
 
-/* =========================================================
-   FAQ HEADING
-========================================================= */
+   /* FAQ HEADING */
 
 .faq-section-title {
   margin: 0 0 42px;
@@ -45,9 +39,7 @@
 }
 
 
-/* =========================================================
-   FAQ LIST
-========================================================= */
+   /* FAQ LIST */
 
 .faq-accordion-list {
   width: 100%;
@@ -62,9 +54,7 @@
 }
 
 
-/* =========================================================
-   FAQ ITEM
-========================================================= */
+   /* FAQ ITEM */
 
 .faq-item {
   width: 100%;
@@ -87,9 +77,7 @@
 }
 
 
-/* =========================================================
-   OPEN FAQ ITEM
-========================================================= */
+   /* OPEN FAQ ITEM */
 
 .faq-item.open {
   border-bottom: 1px solid #C6D1DC;
@@ -102,9 +90,7 @@
 }
 
 
-/* =========================================================
-   QUESTION BUTTON
-========================================================= */
+   /* QUESTION BUTTON */
 
 .faq-question-btn {
   width: 100%;
@@ -135,9 +121,7 @@
 }
 
 
-/* =========================================================
-   QUESTION TEXT
-========================================================= */
+   /* QUESTION TEXT */
 
 .faq-question-text {
   flex: 1;
@@ -170,9 +154,7 @@
 }
 
 
-/* =========================================================
-   TOGGLE ICON
-========================================================= */
+   /* TOGGLE ICON */
 
 .faq-toggle-icon {
   width: 28px;
@@ -207,9 +189,7 @@
 }
 
 
-/* =========================================================
-   ACTIVE TOGGLE ICON
-========================================================= */
+   /* ACTIVE TOGGLE ICON */
 
 .faq-toggle-icon.active {
   background: #12406F;
@@ -220,9 +200,7 @@
 }
 
 
-/* =========================================================
-   SVG ICON
-========================================================= */
+   /* SVG ICON */
 
 .faq-toggle-icon svg {
   display: block;
@@ -233,9 +211,7 @@
 }
 
 
-/* =========================================================
-   ANSWER PANEL
-========================================================= */
+   /* ANSWER PANEL */
 
 .faq-answer-panel {
   width: 100%;
@@ -248,9 +224,7 @@
 }
 
 
-/* =========================================================
-   ANSWER TEXT
-========================================================= */
+   /* ANSWER TEXT */
 
 .faq-answer-text {
   max-width: 1200px;
@@ -271,9 +245,7 @@
 }
 
 
-/* =========================================================
-   ANIMATION
-========================================================= */
+   /* ANIMATION */
 
 @keyframes faqFadeIn {
   from {
@@ -290,9 +262,7 @@
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
+   /* TABLET */
 
 @media (max-width: 992px) {
   .faq-section {
@@ -319,9 +289,7 @@
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+   /* MOBILE */
 
 @media (max-width: 768px) {
   .faq-section {
@@ -368,9 +336,7 @@
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+   /* SMALL MOBILE */
 
 @media (max-width: 576px) {
   .faq-section {
@@ -417,25 +383,22 @@
 }
 
 
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
+   /* EXTRA SMALL MOBILE */
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .faq-section {
-    padding: 34px 0 42px;
+    padding: 36px 0 44px;
   }
 
   .faq-section-title {
-    font-size: 23px;
-
-    margin-bottom: 25px;
+    font-size: 22px;
+    margin-bottom: 26px;
   }
 
   .faq-question-btn {
     min-height: 56px;
-
     padding: 14px 0;
+    gap: 10px;
   }
 
   .faq-question-text {
@@ -443,18 +406,101 @@
   }
 
   .faq-toggle-icon {
-    width: 25px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
 
-    height: 25px;
-
-    min-width: 25px;
+  .faq-toggle-icon svg {
+    width: 11px;
+    height: 11px;
   }
 
   .faq-answer-panel {
-    padding-right: 28px;
+    padding: 0 28px 16px 0;
   }
 
   .faq-answer-text {
     font-size: 12.5px;
+  }
+}
+
+
+   /* VERY SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .faq-section {
+    padding: 32px 0 40px;
+  }
+
+  .faq-section-title {
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+
+  .faq-question-btn {
+    min-height: 54px;
+    padding: 13px 0;
+  }
+
+  .faq-question-text {
+    font-size: 12.5px;
+  }
+
+  .faq-toggle-icon {
+    width: 23px;
+    height: 23px;
+    min-width: 23px;
+  }
+
+  .faq-answer-panel {
+    padding-right: 24px;
+  }
+
+  .faq-answer-text {
+    font-size: 12px;
+  }
+}
+
+
+   /* TINY DEVICES */
+
+@media (max-width: 360px) {
+  .faq-section {
+    padding: 28px 0 36px;
+  }
+
+  .faq-section-title {
+    font-size: 19px;
+    margin-bottom: 22px;
+  }
+
+  .faq-question-btn {
+    min-height: 50px;
+    padding: 12px 0;
+    gap: 8px;
+  }
+
+  .faq-question-text {
+    font-size: 12px;
+  }
+
+  .faq-toggle-icon {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+
+  .faq-toggle-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .faq-answer-panel {
+    padding: 0 20px 14px 0;
+  }
+
+  .faq-answer-text {
+    font-size: 11.5px;
   }
 }

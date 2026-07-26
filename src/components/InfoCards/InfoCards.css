@@ -1,21 +1,15 @@
 .info-cards-section {
   --visible-cards: 3;
-  --gap: 36px;
+  --gap: 48px;
   width: 100%;
-  padding: 0 0 44px;
+  padding: 0 60px 44px;
   background: #ffffff;
   overflow: hidden;
-}
-
-   /* CONTAINER — side margins added */
-
-.container {
-  width: 100%;
-  max-width: 1454px;
-  margin: 0 auto;
-  padding: 0 40px;
   box-sizing: border-box;
 }
+
+/* Container padding is handled by the global .container class in index.css
+   — the side padding below is a fallback in case .container isn't wrapping this section */
 
 .cards-track-wrapper {
   padding: 24px 0 12px;
@@ -26,63 +20,38 @@
   display: flex;
   gap: var(--gap);
   width: 100%;
-
-  transition:
-    transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-
-   /* CARD */
+/* CARD */
 
 .navy-info-card {
   position: relative;
-
-  flex: 0 0 calc(
-    (100% - (var(--visible-cards) - 1) * var(--gap)) /
-    var(--visible-cards)
-  );
-
+  flex: 0 0 calc((100% - (var(--visible-cards) - 1) * var(--gap)) / var(--visible-cards));
   min-height: 150px;
-
-  padding: 42px 28px 42px;
-
+  padding: 42px 32px 42px;
   box-sizing: border-box;
-
   border-radius: 22px;
-
   background: #12406F;
-
   color: #ffffff;
-
   display: flex;
   flex-direction: column;
-
   overflow: hidden;
-
   isolation: isolate;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-   /* BOTTOM RIGHT HEXAGON PATTERN */
+/* BOTTOM RIGHT HEXAGON PATTERN */
 
 .navy-info-card::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='34.64' viewBox='0 0 30 34.64'%3E%3Cpath d='M15 0L30 8.66V25.98L15 34.64L0 25.98V8.66L15 0Z' fill='none' stroke='%23FFFFFF' stroke-width='.55'/%3E%3C/svg%3E");
-
   background-repeat: repeat;
   background-size: 30px 34.64px;
   background-position: right bottom;
-
   opacity: 0.32;
-
   -webkit-mask-image: radial-gradient(
     ellipse 75% 100% at 100% 100%,
     rgba(0, 0, 0, 0.95) 0%,
@@ -91,7 +60,6 @@
     rgba(0, 0, 0, 0.12) 68%,
     transparent 88%
   );
-
   mask-image: radial-gradient(
     ellipse 75% 100% at 100% 100%,
     rgba(0, 0, 0, 0.95) 0%,
@@ -100,56 +68,45 @@
     rgba(0, 0, 0, 0.12) 68%,
     transparent 88%
   );
-
   pointer-events: none;
   z-index: -1;
 }
 
-
-   /* TOP LEFT HEXAGON PATTERN */
+/* TOP LEFT HEXAGON PATTERN */
 
 .navy-info-card::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='34.64' viewBox='0 0 30 34.64'%3E%3Cpath d='M15 0L30 8.66V25.98L15 34.64L0 25.98V8.66L15 0Z' fill='none' stroke='%23FFFFFF' stroke-width='.55'/%3E%3C/svg%3E");
-
   background-repeat: repeat;
   background-size: 30px 34.64px;
   background-position: left top;
-
   opacity: 0.20;
-
   -webkit-mask-image: radial-gradient(
     ellipse 45% 60% at 0% 0%,
     rgba(0, 0, 0, 0.8) 0%,
     rgba(0, 0, 0, 0.35) 35%,
     transparent 75%
   );
-
   mask-image: radial-gradient(
     ellipse 45% 60% at 0% 0%,
     rgba(0, 0, 0, 0.8) 0%,
     rgba(0, 0, 0, 0.35) 35%,
     transparent 75%
   );
-
   pointer-events: none;
   z-index: -1;
 }
 
-
-   /* CONTENT */
+/* CONTENT */
 
 .navy-info-card > * {
   position: relative;
   z-index: 2;
 }
 
-
-   /* TITLE */
+/* TITLE */
 
 .card-title {
   margin: 0 0 20px;
@@ -160,8 +117,7 @@
   font-family: var(--font-heading);
 }
 
-
-   /* DESCRIPTION */
+/* DESCRIPTION */
 
 .card-text {
   margin: 0;
@@ -174,8 +130,7 @@
   font-family: var(--font-body);
 }
 
-
-   /* KNOW MORE */
+/* KNOW MORE */
 
 .card-cta-link {
   display: inline-flex;
@@ -192,8 +147,7 @@
   transition: gap 0.25s ease;
 }
 
-
-   /* ARROW CIRCLE */
+/* ARROW CIRCLE */
 
 .arrow-circle {
   width: 30px;
@@ -208,8 +162,7 @@
   transition: transform 0.25s ease;
 }
 
-
-   /* HOVER */
+/* HOVER */
 
 .navy-info-card:hover {
   transform: translateY(-5px);
@@ -219,8 +172,7 @@
   transform: translateX(3px);
 }
 
-
-   /* DOTS */
+/* DOTS */
 
 .cards-dots {
   display: flex;
@@ -248,12 +200,11 @@
   background: #0f2d52;
 }
 
-
-   /* TABLET (large) */
+/* TABLET (large) */
 
 @media (max-width: 1100px) {
-  .container {
-    padding: 0 32px;
+  .info-cards-section {
+    padding: 0 40px 44px;
   }
 
   .navy-info-card {
@@ -274,17 +225,13 @@
   }
 }
 
-
-   /* 2 CARDS */
+/* 2 CARDS */
 
 @media (max-width: 920px) {
-  .container {
-    padding: 0 26px;
-  }
-
   .info-cards-section {
     --visible-cards: 2;
-    --gap: 24px;
+    --gap: 32px;
+    padding: 0 32px 44px;
   }
 
   .navy-info-card {
@@ -305,18 +252,13 @@
   }
 }
 
-
-   /* MOBILE */
+/* MOBILE */
 
 @media (max-width: 640px) {
-  .container {
-    padding: 0 20px;
-  }
-
   .info-cards-section {
     --visible-cards: 1;
-    --gap: 16px;
-    padding-bottom: 32px;
+    --gap: 0px;
+    padding: 0 20px 32px;
   }
 
   .cards-track-wrapper {
@@ -350,12 +292,11 @@
   }
 }
 
-
-   /* EXTRA SMALL */
+/* EXTRA SMALL */
 
 @media (max-width: 400px) {
-  .container {
-    padding: 0 16px;
+  .info-cards-section {
+    padding: 0 16px 32px;
   }
 
   .navy-info-card {
@@ -373,5 +314,44 @@
   .card-cta-link {
     font-size: 14px;
     gap: 10px;
+  }
+}
+
+/* VERY SMALL MOBILE (≤360px) */
+
+@media (max-width: 360px) {
+  .info-cards-section {
+    padding: 0 14px 32px;
+  }
+
+  .navy-info-card {
+    padding: 22px 16px;
+    min-height: 200px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .card-text {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .card-cta-link {
+    font-size: 13px;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .arrow-circle {
+    width: 26px;
+    height: 26px;
+  }
+
+  .arrow-circle svg {
+    width: 14px;
+    height: 14px;
   }
 }

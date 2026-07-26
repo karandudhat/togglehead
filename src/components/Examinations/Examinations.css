@@ -192,9 +192,9 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .examinations-section {
-    padding: 32px 16px;
+    padding: 36px 18px;
   }
 
   .exam-title {
@@ -202,23 +202,95 @@
   }
 
   .exam-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 
   .exam-cards-grid {
-    padding: 0 12px;
+    gap: 14px;
+    padding: 0 16px;
   }
 
   .exam-card {
-    padding: 10px 12px;
+    padding: 14px 16px;
+    gap: 12px;
   }
 
   .exam-date {
-    font-size: 0.98rem;
+    font-size: 1rem;
+  }
+
+  .exam-level,
+  .exam-extra-text {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .examinations-section {
+    padding: 32px 16px;
+  }
+
+  .exam-title {
+    font-size: 1.35rem;
+  }
+
+  .exam-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .exam-cards-grid {
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .exam-card {
+    padding: 12px 14px;
+  }
+
+  .exam-date {
+    font-size: 0.95rem;
   }
 
   .exam-level,
   .exam-extra-text {
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .examinations-section {
+    padding: 28px 12px;
+  }
+
+  .exam-title {
+    font-size: 1.2rem;
+  }
+
+  .exam-subtitle {
+    font-size: 0.76rem;
+  }
+
+  .exam-cards-grid {
+    gap: 10px;
+    padding: 0 6px;
+  }
+
+  .exam-card {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .exam-icon-wrapper {
+    width: 22px;
+    height: 22px;
+  }
+
+  .exam-date {
+    font-size: 0.88rem;
+  }
+
+  .exam-level,
+  .exam-extra-text {
+    font-size: 0.78rem;
   }
 }
